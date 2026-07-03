@@ -46,30 +46,30 @@ echo elgg_view_image_block(elgg_view_icon('calendar', ['class' => 'elgg-icon-hov
 // event details
 $location = $event->location;
 if ($location) {
-	echo elgg_format_element('label', [], elgg_echo('event_manager:edit:form:location'));
+	echo elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:location'));
 	echo elgg_format_element('div', ['class' => 'mbm'], $location);
 }
 
 $organizer = $event->organizer;
 if ($organizer) {
-	echo elgg_format_element('label', [], elgg_echo('event_manager:edit:form:organizer'));
+	echo elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:organizer'));
 	echo elgg_format_element('div', ['class' => 'mbm'], $organizer);
 }
 
 $description = $event->description;
 if ($description) {
-	echo elgg_format_element('label', [], elgg_echo('description'));
+	echo elgg_format_element('strong', [], elgg_echo('description'));
 	echo elgg_format_element('div', ['class' => 'mbm'], elgg_view('output/longtext', ['value' => $description]));
 }
 
 $region = $event->region;
 if ($region) {
-	echo elgg_format_element('label', [], elgg_echo('event_manager:edit:form:region'));
+	echo elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:region'));
 	echo elgg_format_element('div', ['class' => 'mbm'], $region);
 }
 
 $type = $event->event_type;
 if ($type) {
-	echo elgg_format_element('label', [], elgg_echo('event_manager:edit:form:type'));
+	echo elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:type'));
 	echo elgg_format_element('div', ['class' => 'mbm'], $type);
 }

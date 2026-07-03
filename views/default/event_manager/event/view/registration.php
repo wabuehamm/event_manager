@@ -13,7 +13,7 @@ $endregistration_day = $event->endregistration_day;
 
 if ($endregistration_day) {
 	$registration_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:endregistration_day') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:endregistration_day') . ':'),
 		elgg_view('output/date', ['value' => $endregistration_day])
 	);
 }
@@ -39,21 +39,21 @@ if ($max_attendees) {
 	}
 	
 	$registration_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:spots_left') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:spots_left') . ':'),
 		$attendee_info
 	);
 }
 
 if ($fee) {
 	$registration_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:fee') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:fee') . ':'),
 		elgg_view('output/text', ['value' => $fee]) . elgg_view('output/longtext', ['value' => $event->fee_details])
 	);
 }
 
 if ($type) {
 	$registration_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:type') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:type') . ':'),
 		$type
 	);
 }

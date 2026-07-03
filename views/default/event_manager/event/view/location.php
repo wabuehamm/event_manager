@@ -13,14 +13,14 @@ $event_region = $event->region;
 
 if ($event_region) {
 	$location_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:region') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:region') . ':'),
 		$event_region
 	);
 }
 
 if ($event_venue) {
 	$location_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:venue') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:venue') . ':'),
 		$event_venue
 	);
 }
@@ -29,7 +29,7 @@ if ($event_location) {
 	$maps_provider = event_manager_get_maps_provider();
 	
 	$location_details .= elgg_view_image_block(
-		elgg_format_element('label', [], elgg_echo('event_manager:edit:form:location') . ':'),
+		elgg_format_element('strong', [], elgg_echo('event_manager:edit:form:location') . ':'),
 		$event_location . elgg_view("event_manager/maps/{$maps_provider}/route", $vars)
 	);
 	

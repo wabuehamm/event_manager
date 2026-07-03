@@ -19,10 +19,10 @@ if ($show_title) {
 }
 
 if (($entity->guid !== elgg_get_logged_in_user_guid()) && !$entity instanceof \ElggUser) {
-	echo elgg_format_element('label', [], elgg_echo('user:name:label'));
+	echo elgg_format_element('strong', [], elgg_echo('user:name:label'));
 	echo elgg_format_element('div', ['class' => 'mbm'], $entity->getDisplayName());
 	
-	echo elgg_format_element('label', [], elgg_echo('email'));
+	echo elgg_format_element('strong', [], elgg_echo('email'));
 	echo elgg_format_element('div', ['class' => 'mbm'], $entity->email);
 }
 
@@ -30,6 +30,6 @@ if (($entity->guid !== elgg_get_logged_in_user_guid()) && !$entity instanceof \E
 foreach ($questions as $question) {
 	$answer_value = (string) $question->getAnswerFromUser($entity->guid)?->value;
 	
-	echo elgg_format_element('label', [], $question->getDisplayName());
+	echo elgg_format_element('strong', [], $question->getDisplayName());
 	echo elgg_format_element('div', ['class' => 'mbm'], $answer_value);
 }
