@@ -14,7 +14,7 @@ if (is_dir(__DIR__ . '/vendor')) {
 
 return [
 	'plugin' => [
-		'version' => '21.0',
+		'version' => '21.1',
 	],
 	'bootstrap' => Bootstrap::class,
 	'settings' => [
