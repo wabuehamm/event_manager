@@ -40,4 +40,7 @@ if (empty($location_details)) {
 	return;
 }
 
-echo elgg_view_module('event', '', $location_details, ['id' => 'location']);
+echo elgg_view_module('event', elgg_echo('event_manager:edit:form:tabs:location'), $location_details, [
+	'class' => 'event-location',
+	'id' => 'location',
+]);

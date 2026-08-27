@@ -37,7 +37,7 @@ if ($website) {
 }
 
 if (!empty($contact_information)) {
-	echo elgg_view_module('event', elgg_echo('event_manager:edit:form:tabs:contact'), $contact_information, ['class' => 'event-manager-contact-details']);
+	echo elgg_view_module('event', elgg_echo('event_manager:edit:form:tabs:contact'), $contact_information, ['class' => 'event-contact-details']);
 }
 
 $contact_guids = $event->contact_guids;
@@ -57,5 +57,5 @@ if (!empty($contact_guids)) {
 		$contact_content .= elgg_view_image_block($member_icon, elgg_view_entity_url($member_entity), ['class' => 'pan']);
 	}
 	
-	echo elgg_view_module('event', elgg_echo('event_manager:event:view:contact_persons'), $contact_content);
+	echo elgg_view_module('event', elgg_echo('event_manager:event:view:contact_persons'), $contact_content, ['class' => 'event-contact-details']);
 }

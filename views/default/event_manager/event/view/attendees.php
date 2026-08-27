@@ -63,7 +63,7 @@ foreach ($supported_relationships as $rel => $label) {
 		]);
 	}
 	
-	$module_vars = [];
+	$module_vars = ['class' => 'event-attendees'];
 	
 	if ($can_edit) {
 		// export action
@@ -78,5 +78,5 @@ foreach ($supported_relationships as $rel => $label) {
 		]);
 	}
 			
-	echo elgg_view_module('info', $rel_title, $rel_content, $module_vars);
+	echo elgg_view_module('event', $rel_title, $rel_content, $module_vars);
 }

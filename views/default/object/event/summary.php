@@ -11,11 +11,6 @@ if ($event->owner_guid === elgg_get_logged_in_user_guid()) {
 	$vars['class'] = elgg_extract_class($vars, 'event-manager-event-attending');
 }
 
-if (elgg_extract('full_view', $vars)) {
-	echo elgg_view('event_manager/event/view', $vars);
-	return;
-}
-
 $content = '';
 
 $excerpt = $event->getExcerpt();

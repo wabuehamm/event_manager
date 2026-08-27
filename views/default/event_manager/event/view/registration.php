@@ -58,7 +58,4 @@ if ($type) {
 	);
 }
 
-$content = elgg_format_element('div', [], $registration_details);
-$content .= elgg_format_element('div', [], elgg_view('event_manager/event/rsvp', $vars));
-
-echo elgg_format_element('div', ['class' => 'event-manager-view-registration-details'], $content);
+echo elgg_format_element('div', ['class' => 'event-manager-view-registration-details'], $registration_details);

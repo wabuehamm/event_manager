@@ -34,7 +34,7 @@ foreach ($event->getEventDays() as $key => $day) {
 	];
 }
 
-$module_vars = [];
+$module_vars = ['class' => 'event-program'];
 if ($event->canEdit() && $show_owner_actions) {
 	$module_vars['menu'] = elgg_view('output/url', [
 		'href' => false,
@@ -50,4 +50,4 @@ if ($event->canEdit() && $show_owner_actions) {
 
 $content = elgg_view('page/components/tabs', $tab_options);
 
-echo elgg_view_module('info', elgg_echo('event_manager:event:program'), $content, $module_vars);
+echo elgg_view_module('event', elgg_echo('event_manager:event:program'), $content, $module_vars);
